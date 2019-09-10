@@ -29,8 +29,8 @@ before_install:
 install:
   - yarn install
 script:
-  - ng test  --watch=false
-  - ng build  --prod
+  - npm run test  --watch=false
+  # - ng build  --prod
 
 notifications:
   webhooks:
