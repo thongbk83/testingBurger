@@ -30,17 +30,17 @@ install:
   - yarn install
 script:
   - npm run test  --watch=false
-  # - ng build  --prod
+  - npm build  --prod
 
 notifications:
   webhooks:
     on_success: change
     on_failure: always
     on_start: false
-# deploy:
-#   provider: heroku
-#   api_key:
-#     secure: 668020fb-9b06-4319-b94c-7e73dfcefb83
-#   app: thong-automation-heroku
-#   on:
-#     repo: thongbk83/excercise
+deploy:
+  provider: heroku
+  api_key:
+    secure: 668020fb-9b06-4319-b94c-7e73dfcefb83
+  app: automation-testing-burger
+  on:
+    repo: thongbk83/testingBurger
